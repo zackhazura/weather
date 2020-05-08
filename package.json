@@ -4,7 +4,7 @@
   "description": "log current time and weather to console for a given city/zip",
   "main": "weather.js",
   "scripts": {
-    "test": "mocha || true"
+    "test": "mocha spec/appSpec.js || true"
   },
   "repository": {
     "type": "git",

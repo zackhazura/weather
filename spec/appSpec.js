@@ -4,6 +4,9 @@ const functions = require('../app/functions')
 
 describe('Weather App', function(){
   const modelLocations = functions.modelLocations
+  const reportWeather = functions.reportWeather
+  const getWeatherFromAPI = functions.getWeatherFromAPI
+  const logResultToConsole = functions.logResultToConsole
 
   describe('modelLocations()', function() {
 

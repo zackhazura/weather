@@ -24,4 +24,4 @@ coverage
 build/
 
 # API data
-/config/API_KEY.js
+app/config/API_KEY.js

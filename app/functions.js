@@ -16,7 +16,32 @@ const reportWeather = (locations, getCallback, logCallback) => {
   }
 }
 
+const getWeatherFromAPI = (location, callback) => {
+  const params = {
+    access_key: API_KEY,
+    query: location
+  }
+  axios.get('http://api.weatherstack.com/current', {params})
+    .then(weatherData => {
+      callback(location, null, weatherData)
+    })
+    .catch(err => {
+      callback(location, err)
+    })
+}
+
+const logResultToConsole = (query, err, response) => {
+  if (err) {
+    console.log(`Error: Could not find weather for ${query}`)
+  } else {
+    const apiResponse = response.data
+    console.log(`It is ${apiResponse.location.localtime} in ${apiResponse.location.name}. The weather is ${apiResponse.current.temperature} degrees Celsius and ${apiResponse.current.weather_descriptions}.`)
+  }
+}
+
 module.exports = {
   modelLocations,
-  reportWeather
+  reportWeather,
+  getWeatherFromAPI,
+  logResultToConsole
 }

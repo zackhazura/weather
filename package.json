@@ -23,5 +23,8 @@
     "chai": "^4.2.0",
     "mocha": "^7.1.2",
     "sinon": "^9.0.2"
+  },
+  "bin": {
+    "weather": ".app/weather.js"
   }
 }

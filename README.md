@@ -5,7 +5,7 @@ Program can be executed from the console using command "weather" followed by com
 
 Example:
 ```
-"./weather New York, 94114, Tokyo, asdfasf
+weather New York, 94114, Tokyo, asdfasf
 ```
 
 Example output:
